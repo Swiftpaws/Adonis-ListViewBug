@@ -1,0 +1,35 @@
+﻿<controls:AdonisWindow
+    x:Class="WpfApp4.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="clr-namespace:AdonisUI.Controls;assembly=AdonisUI"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:WpfApp4"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="800"
+    Height="450"
+    mc:Ignorable="d">
+    <Window.Style>
+        <Style BasedOn="{StaticResource {x:Type Window}}" TargetType="Window" />
+    </Window.Style>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <ListView x:Name="lvTest" />
+        <ListView x:Name="lvTest1" Grid.Row="1">
+            <ListView.Resources>
+                <Style BasedOn="{x:Null}" TargetType="ListViewItem" />
+                <Style BasedOn="{x:Null}" TargetType="ListView" />
+            </ListView.Resources>
+        </ListView>
+        <ListView x:Name="lvTest2" Grid.Row="2">
+            <ListView.Resources>
+                <Style BasedOn="{x:Null}" TargetType="ListViewItem" />
+            </ListView.Resources>
+        </ListView>
+    </Grid>
+</controls:AdonisWindow>
